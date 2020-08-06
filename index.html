@@ -7,24 +7,7 @@
     <script>
       window.onload = function () {
         const navbar = document.querySelector("pg-software");
-        navbar.menuItems = [
-          {
-            title: "Gmail for You",
-            link: "https://gmail.com/",
-          },
-          {
-            title: "Google for You",
-            link: "https://www.google.com.vn/",
-          },
-          {
-            title: "Facebook for You",
-            link: "https://fb.com/",
-          },
-          {
-            title: "Slack for You",
-            link: "https://www.google.com.vn/",
-          },
-        ];
+        navbar.userRoles = [1, 4];
         const component = document.querySelector("direflow-master");
         component.tasksList = [
           "Quân Tiến Vũ 1",
