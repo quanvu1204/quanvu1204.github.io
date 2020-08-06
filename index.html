@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./direflowBundle.js"></script>
+    <script>
+      window.onload = function () {
+        const navbar = document.querySelector("pg-software");
+        navbar.menuItems = [
+          {
+            title: "Gmail for You",
+            link: "https://gmail.com/",
+          },
+          {
+            title: "Google for You",
+            link: "https://www.google.com.vn/",
+          },
+          {
+            title: "Facebook for You",
+            link: "https://fb.com/",
+          },
+          {
+            title: "Slack for You",
+            link: "https://www.google.com.vn/",
+          },
+        ];
+        const component = document.querySelector("direflow-master");
+        component.tasksList = [
+          "Quân Tiến Vũ 1",
+          "Quân Vũ Tiến 2",
+          "Tiến Quân Vũ 3",
+          "Vũ Tiến Quân 4",
+        ];
+        component.addEventListener("send-actived", (e) => {
+          // handle event
+          console.log(e.detail); // 42
+        });
+        component.addEventListener("send-all", (e) => {
+          // handle event
+          console.log(e.detail); // 42
+        });
+        component.addEventListener("send-dummy-data", (e) => {
+          // handle event
+          console.log(e.detail); // 42
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <pg-software></pg-software>
+    <direflow-master componentTitle="Tien Quan Dep Trai"></direflow-master>
+  </body>
+</html>
